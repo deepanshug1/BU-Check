@@ -1,0 +1,20 @@
+h1{
+    color: #FFF8DC;
+    margin: auto;
+    text-align: center;
+}
+.page{
+    width: 100%;
+    padding: 18px;
+    /* background-color: rgb(113, 226, 230); */
+    height: 100vh;
+}
+input,textarea,button{
+    
+    display: block;
+    margin: 12px auto;
+    padding: 12px 11px;
+    border: none;
+    border-radius: 8px;
+    width: 60%;
+}

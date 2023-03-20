@@ -1,0 +1,202 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+ html, body {
+	 overflow: hidden;
+}
+#bt{
+	width: 50px;
+	align-self: center;
+}
+ .background {
+	 background-size: cover;
+	 background-repeat: no-repeat;
+	 background-position: center center;
+	 overflow: hidden;
+	 will-change: transform;
+	 backface-visibility: hidden;
+	 height: 130vh;
+	 position: fixed;
+	 width: 100%;
+	 transform: translateY(30vh);
+	 transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
+}
+ .background:before {
+	 content: "";
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 background-color: rgba(0, 0, 0, .3);
+}
+ .background:first-child {
+	 background-image: url(img1.jpg);
+	 transform: translateY(-15vh);
+}
+ .background:first-child .content-wrapper {
+	 transform: translateY(15vh);
+}
+ .background:nth-child(2) {
+	 background-image: url(img3.jpg);
+}
+ .background:nth-child(3) {
+	 background-image: url(img4.jpg);
+}
+ .background:nth-child(1) {
+	 z-index: 3;
+}
+ .background:nth-child(2) {
+	 z-index: 2;
+}
+ .background:nth-child(3) {
+	 z-index: 1;
+}
+ .content-wrapper {
+	 height: 100vh;
+	 display: flex;
+	 justify-content: center;
+	 text-align: center;
+	 flex-flow: column nowrap;
+	 color: #fff;
+	 font-family: Montserrat;
+	 text-transform: uppercase;
+	 transform: translateY(40vh);
+	 will-change: transform;
+	 backface-visibility: hidden;
+	 transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
+}
+ .content-title {
+	 font-size: 12vh;
+	 line-height: 1.4;
+}
+ .background.up-scroll {
+	 transform: translate3d(0, -15vh, 0);
+}
+ .background.up-scroll .content-wrapper {
+	 transform: translateY(15vh);
+}
+ .background.up-scroll + .background {
+	 transform: translate3d(0, 30vh, 0);
+}
+ .background.up-scroll + .background .content-wrapper {
+	 transform: translateY(30vh);
+}
+ .background.down-scroll {
+	 transform: translate3d(0, -130vh, 0);
+}
+ .background.down-scroll .content-wrapper {
+	 transform: translateY(40vh);
+}
+ .background.down-scroll + .background:not(.down-scroll) {
+	 transform: translate3d(0, -15vh, 0);
+}
+ .background.down-scroll + .background:not(.down-scroll) .content-wrapper {
+	 transform: translateY(15vh);
+}
+
+.login-box form a {
+	position: relative;
+	display: inline-block;
+	padding: 10px 20px;
+	color: #000000;
+	font-size: 32px;
+	text-decoration: none;
+	text-decoration-style: double;
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: .5s;
+	margin-top: 40px;
+	letter-spacing: 4px
+  }
+  
+  .login-box a:hover {
+	background: #000000;
+	color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 20px #000000,
+				0 0 40px #000000,
+				0 0 65px #000000,
+				0 0 115px #000000;
+  }
+  
+  .login-box a span {
+	position: absolute;
+	display: block;
+  }
+  
+  .login-box a span:nth-child(1) {
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #000000);
+	animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+	0% {
+	  left: -100%;
+	}
+	50%,100% {
+	  left: 100%;
+	}
+  }
+  
+  .login-box a span:nth-child(2) {
+	top: -100%;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, #000000);
+	animation: btn-anim2 1s linear infinite;
+	animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+	0% {
+	  top: -100%;
+	}
+	50%,100% {
+	  top: 100%;
+	}
+  }
+  
+  .login-box a span:nth-child(3) {
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg, transparent, #000000);
+	animation: btn-anim3 1s linear infinite;
+	animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+	0% {
+	  right: -100%;
+	}
+	50%,100% {
+	  right: 100%;
+	}
+  }
+  
+  .login-box a span:nth-child(4) {
+	bottom: -100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg, transparent, #000000);
+	animation: btn-anim4 1s linear infinite;
+	animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+	0% {
+	  bottom: -100%;
+	}
+	50%,100% {
+	  bottom: 100%;
+	}
+  }
+  

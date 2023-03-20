@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University web design</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    
+    <section class="header">
+        <nav>
+            
+            <a href="index.html"><img src="image/Bennett_University.png" id="log" alt=""></a>
+            <div class="nav-links" id="navlinks">
+                <i class="fa fa-times" onclick="hideMenu()" ></i>
+                <!-- <i class="fa fa-times" aria-hidden="true"></i> -->
+                <ul>
+                    <li><a href="/" >Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Course</a></li>
+                    <li><a href="/contactPage">Contact us</a></li>
+                </ul>
+            </div>
+             <!-- <i class="fa fa-bars" "></i> -->
+            <i class="fa fa-bars " onclick="showMenu()"></i> 
+        </nav>
+
+
+        <div class="page">
+    
+   
+
+            <h1>Fill This Form for queries about our University</h1>
+            <form action="https://formsubmit.co/devgarg880@gmail.com" method="POST" id="contact">
+        
+              <input type="text" name="name" id="name" placeholder="Enter your Name" >
+              <input type="text" name="gender" id="name" placeholder="Enter your Gender" >
+              <input type="number" name="contact_number" id="number" placeholder="Enter your Contact Number" >
+              <input type="email" name="mail" id="mail" placeholder="Enter your email">
+              <textarea name="address" id="address" cols="30" rows="2" placeholder="Enter your Address"></textarea>
+              <textarea name="Questions" id="address" cols="30" rows="5" placeholder="Any Questions..?"></textarea>
+              <button type="submit" id="btn"> Submit </button>
+              
+            </form>
+
+            <hr>
+
+            <h1>Fill this form to Register: </h1>
+            <form action="connect.php" method="post">
+                <input type="text" name="name" id="name" placeholder="Enter your Name" >
+                <input type="number" name="con" id="number" placeholder="Enter your Contact Number" >
+                <input type="email" name="mail" id="mail" placeholder="Enter your email">
+                <input type="submit" id="btn"/>
+                <br>
+              
+            </form>
+          </div>
+    </section >
+
+   
+  </body>
+</html>
